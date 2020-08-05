@@ -20,7 +20,7 @@
   --toggle: hsl(230, 22%, 74%);
   --bg: hsl(0, 0%, 100%);
   --bg-header: hsl(225, 100%, 98%);
-  --bg-card: hsl(227, 47%, 96%);
+  --bg-card: #f0f3fa;
   --text-secondary: hsl(228, 12%, 44%);
   --text-primary: hsl(230, 17%, 14%);
 }
@@ -29,7 +29,7 @@ body.dark {
   --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --bg: hsl(230, 17%, 14%);
   --bg-header: hsl(232, 19%, 15%);
-  --bg-card: hsl(228, 28%, 20%);
+  --bg-card: #252b43;
   --text-secondary: hsl(228, 34%, 66%);
   --text-primary: hsl(0, 0%, 100%);
 }
@@ -170,6 +170,15 @@ header .nav__nav-item .toggle .btn-toggle {
       justify-content: space-around;
   padding: 1.5rem 3rem;
   position: relative;
+  cursor: pointer;
+}
+
+.social .card:hover {
+  background: #e1e3f0;
+}
+
+.dark .social .card:hover {
+  background: #333a56;
 }
 
 .social .card.border-facebook {
@@ -260,7 +269,7 @@ header .nav__nav-item .toggle .btn-toggle {
 }
 
 .overview {
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 .overview h2 {
@@ -281,10 +290,20 @@ header .nav__nav-item .toggle .btn-toggle {
 }
 
 .overview .overview__cards .card {
-  background: var(--bg-card);
+  background-color: var(--bg-card);
+  border-radius: 5px;
   padding: 1.5rem;
   margin-top: 1rem;
   width: 220px;
+  cursor: pointer;
+}
+
+.overview .overview__cards .card:hover {
+  background: #e1e3f0;
+}
+
+.dark .overview .overview__cards .card:hover {
+  background: #333a56;
 }
 
 .overview .overview__cards .card .card__header {
@@ -338,5 +357,45 @@ header .nav__nav-item .toggle .btn-toggle {
           justify-content: center;
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+/* MOBILE SITE */
+@media only screen and (max-width: 920px) {
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+  .nav .nav__nav-item {
+    margin-top: 0.5rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: -3.5rem;
+  }
+  .social .card {
+    margin-top: 1rem;
+  }
+  .overview h2 {
+    font-size: 1rem;
+  }
+  .overview .overview__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .overview .overview__cards .card {
+    margin-top: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
