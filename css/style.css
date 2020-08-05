@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+:root {
+  --green: hsl(163, 72%, 41%);
+  --red: hsl(356, 69%, 56%);
+  --gradient-facebook: hsl(208, 92%, 53%);
+  --gradient-twitter: hsl(203, 89%, 53%);
+  --gradient-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --gradient-youTube: hsl(348, 97%, 39%);
+  --toggle: hsl(230, 22%, 74%);
+  --bg: hsl(0, 0%, 100%);
+  --bg-header: hsl(225, 100%, 98%);
+  --bg-card: hsl(227, 47%, 96%);
+  --text-secondary: hsl(228, 12%, 44%);
+  --text-primary: hsl(230, 17%, 14%);
+}
+
+body.dark {
+  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --bg: hsl(230, 17%, 14%);
+  --bg-header: hsl(232, 19%, 15%);
+  --bg-card: hsl(228, 28%, 20%);
+  --text-secondary: hsl(228, 34%, 66%);
+  --text-primary: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--bg-header);
+  border-radius: 0 0 1rem 1rem;
+  height: 30vh;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+header .nav__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .nav__nav-item--header {
+  color: var(--text-primary);
+}
+
+header .nav__nav-item--sub-header,
+header .nav__nav-item p {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+header .nav__nav-item p {
+  margin-right: 0.5rem;
+}
+
+header .nav__nav-item input[type='checkbox'] {
+  display: none;
+}
+
+header .nav__nav-item .toggle {
+  display: inline-block;
+  background: var(--toggle);
+  border-radius: 50px;
+  height: 1.5rem;
+  width: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+header .nav__nav-item .toggle .btn-toggle {
+  background-color: var(--bg-header);
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.3rem;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.dark .btn-toggle {
+  -webkit-transform: translateX(-1.5rem);
+          transform: translateX(-1.5rem);
+}
+/*# sourceMappingURL=style.css.map */
